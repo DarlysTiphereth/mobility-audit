@@ -47,24 +47,28 @@ np.random.seed(42)  # Reprodutibilidade garantida
 #   d_rede    → distância real pela rede viária (km)
 #   d_geo     → distância geodésica em linha reta (km)
 BAIRROS = {
-    # Periferia crítica — alta pressão, baixa oferta
-    "Benedito Bentes":       (-9.5900, -35.7550, 0.88, 2.0, 8.5, 4.2),
-    "Cidade Universitária":  (-9.6350, -35.7700, 0.85, 2.5, 7.8, 3.9),
-    "Tabuleiro do Martins":  (-9.5800, -35.7650, 0.83, 2.2, 9.1, 4.5),
-    "Antares":               (-9.5980, -35.7820, 0.84, 1.8, 8.9, 4.3),
-    "Clima Bom":             (-9.6100, -35.7600, 0.80, 3.0, 7.2, 3.8),
-    "Jacintinho":            (-9.6200, -35.7500, 0.82, 2.8, 7.5, 3.7),
-    "Serraria":              (-9.6000, -35.7700, 0.78, 3.2, 6.9, 3.5),
-    "Santos Dumont":         (-9.6150, -35.7750, 0.76, 3.5, 6.5, 3.4),
-    # Zona intermediária
-    "Jardim Petrópolis":     (-9.6400, -35.7400, 0.60, 5.0, 5.5, 3.2),
-    "Poço":                  (-9.6480, -35.7450, 0.55, 6.0, 5.0, 3.0),
-    "Farol":                 (-9.6550, -35.7350, 0.45, 7.5, 4.2, 2.8),
-    "Centro":                (-9.6650, -35.7350, 0.40, 9.0, 3.5, 2.5),
-    # Orla privilegiada — baixa pressão, alta oferta (contraste)
-    "Jatiúca":               (-9.6600, -35.7050, 0.25, 12.0, 2.8, 2.2),
-    "Ponta Verde":           (-9.6650, -35.7200, 0.22, 13.0, 2.5, 2.0),
-    "Pajuçara":              (-9.6700, -35.7100, 0.20, 14.0, 2.3, 1.9),
+    # ── Periferia Norte/Noroeste — mais críticos ──────────────
+    "Benedito Bentes":       (-9.4965, -35.8437, 0.88, 2.0, 8.5, 4.2),
+    "Antares":               (-9.5255, -35.7920, 0.84, 1.8, 8.9, 4.3),
+    "Tabuleiro do Martins":  (-9.5370, -35.7930, 0.83, 2.2, 9.1, 4.5),
+    "Cidade Universitária":  (-9.5560, -35.7760, 0.85, 2.5, 7.8, 3.9),
+ 
+    # ── Zona Norte/Centro — críticos ─────────────────────────
+    "Clima Bom":             (-9.5780, -35.7620, 0.80, 3.0, 7.2, 3.8),
+    "Santos Dumont":         (-9.5720, -35.7530, 0.76, 3.5, 6.5, 3.4),
+    "Serraria":              (-9.5800, -35.7450, 0.78, 3.2, 6.9, 3.5),
+    "Jacintinho":            (-9.6180, -35.7640, 0.82, 2.8, 7.5, 3.7),
+ 
+    # ── Zona Intermediária ────────────────────────────────────
+    "Jardim Petrópolis":     (-9.6070, -35.7510, 0.60, 5.0, 5.5, 3.2),
+    "Poço":                  (-9.6380, -35.7390, 0.55, 6.0, 5.0, 3.0),
+    "Farol":                 (-9.6480, -35.7410, 0.45, 7.5, 4.2, 2.8),
+    "Centro":                (-9.6660, -35.7353, 0.40, 9.0, 3.5, 2.5),
+ 
+    # ── Orla Privilegiada — menor IDM (contraste) ────────────
+    "Jatiúca":               (-9.6430, -35.7130, 0.25, 12.0, 2.8, 2.2),
+    "Ponta Verde":           (-9.6570, -35.7130, 0.22, 13.0, 2.5, 2.0),
+    "Pajuçara":              (-9.6690, -35.7120, 0.20, 14.0, 2.3, 1.9),
 }
 
 registros = []
